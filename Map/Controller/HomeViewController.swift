@@ -9,11 +9,21 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var buttonLogin: UIButton!
 
+    @IBOutlet weak var buttonSignup: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        buttonLogin.layer.cornerRadius = 4
+        buttonSignup.layer.cornerRadius = 4
+        navigationController?.navigationBar.isHidden = true
+    }
+    @IBAction func signup(_ sender: Any) {
+       // self.navigationController?.popViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,20 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		8613E3EE1F14CBC300C3C8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613E3ED1F14CBC300C3C8FF /* AppDelegate.swift */; };
-		8613E3F01F14CBC300C3C8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613E3EF1F14CBC300C3C8FF /* ViewController.swift */; };
 		8613E3F31F14CBC300C3C8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8613E3F11F14CBC300C3C8FF /* Main.storyboard */; };
 		8613E3F51F14CBC300C3C8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8613E3F41F14CBC300C3C8FF /* Assets.xcassets */; };
 		8613E3F81F14CBC300C3C8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8613E3F61F14CBC300C3C8FF /* LaunchScreen.storyboard */; };
+		8613E4051F14D31100C3C8FF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613E4041F14D31100C3C8FF /* SignupViewController.swift */; };
+		8622F8071F170A1A007BF9FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8622F8061F170A1A007BF9FD /* HomeViewController.swift */; };
+		8622F80A1F1727FB007BF9FD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8622F8091F1727FB007BF9FD /* UserTableViewCell.swift */; };
+		8622F80C1F172C06007BF9FD /* ListUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8622F80B1F172C06007BF9FD /* ListUserTableViewController.swift */; };
+		869113931F14E7F000C69422 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869113921F14E7F000C69422 /* LoginViewController.swift */; };
+		869113961F14E9B400C69422 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869113951F14E9B400C69422 /* ExtensionUIColor.swift */; };
+		86B94E031F1DC84B00078C1B /* CountryCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 86B94E021F1DC84B00078C1B /* CountryCodes.json */; };
+		86B94E091F1DCCA900078C1B /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B94E081F1DCCA900078C1B /* Country.swift */; };
+		86BD4A361F176A8C00F51FFA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BD4A351F176A8C00F51FFA /* SWRevealViewController.m */; };
+		86BD4A381F176FB800F51FFA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD4A371F176FB800F51FFA /* MapViewController.swift */; };
+		86BD4A3A1F176FDC00F51FFA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD4A391F176FDC00F51FFA /* ChatViewController.swift */; };
+		86BD4A3C1F176FF300F51FFA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD4A3B1F176FF300F51FFA /* SettingsViewController.swift */; };
+		86BD4A3E1F17721900F51FFA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD4A3D1F17721900F51FFA /* MenuViewController.swift */; };
+		86BD4A401F1778D200F51FFA /* ListFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BD4A3F1F1778D200F51FFA /* ListFriendsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8613E3EA1F14CBC300C3C8FF /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8613E3ED1F14CBC300C3C8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8613E3EF1F14CBC300C3C8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8613E3F21F14CBC300C3C8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8613E3F41F14CBC300C3C8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8613E3F71F14CBC300C3C8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8613E3F91F14CBC300C3C8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8613E4041F14D31100C3C8FF /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		8622F8061F170A1A007BF9FD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8622F8091F1727FB007BF9FD /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		8622F80B1F172C06007BF9FD /* ListUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUserTableViewController.swift; sourceTree = "<group>"; };
+		869113921F14E7F000C69422 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		869113951F14E9B400C69422 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		86B94E021F1DC84B00078C1B /* CountryCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryCodes.json; sourceTree = "<group>"; };
+		86B94E081F1DCCA900078C1B /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		86BD4A321F176A8B00F51FFA /* Map-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Map-Bridging-Header.h"; sourceTree = "<group>"; };
+		86BD4A331F176A8C00F51FFA /* SidebarMenu-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SidebarMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		86BD4A341F176A8C00F51FFA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		86BD4A351F176A8C00F51FFA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		86BD4A371F176FB800F51FFA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		86BD4A391F176FDC00F51FFA /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		86BD4A3B1F176FF300F51FFA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		86BD4A3D1F17721900F51FFA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		86BD4A3F1F1778D200F51FFA /* ListFriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFriendsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +83,54 @@
 		8613E3EC1F14CBC300C3C8FF /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				8622F8081F1727E0007BF9FD /* Cell */,
+				869113941F14E99900C69422 /* Helper */,
+				8613E3FF1F14D2D800C3C8FF /* Controller */,
 				8613E3ED1F14CBC300C3C8FF /* AppDelegate.swift */,
-				8613E3EF1F14CBC300C3C8FF /* ViewController.swift */,
 				8613E3F11F14CBC300C3C8FF /* Main.storyboard */,
 				8613E3F41F14CBC300C3C8FF /* Assets.xcassets */,
 				8613E3F61F14CBC300C3C8FF /* LaunchScreen.storyboard */,
 				8613E3F91F14CBC300C3C8FF /* Info.plist */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		8613E3FF1F14D2D800C3C8FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86BD4A331F176A8C00F51FFA /* SidebarMenu-Bridging-Header.h */,
+				86BD4A341F176A8C00F51FFA /* SWRevealViewController.h */,
+				86BD4A351F176A8C00F51FFA /* SWRevealViewController.m */,
+				8613E4041F14D31100C3C8FF /* SignupViewController.swift */,
+				869113921F14E7F000C69422 /* LoginViewController.swift */,
+				8622F8061F170A1A007BF9FD /* HomeViewController.swift */,
+				8622F80B1F172C06007BF9FD /* ListUserTableViewController.swift */,
+				86BD4A321F176A8B00F51FFA /* Map-Bridging-Header.h */,
+				86BD4A371F176FB800F51FFA /* MapViewController.swift */,
+				86BD4A391F176FDC00F51FFA /* ChatViewController.swift */,
+				86BD4A3B1F176FF300F51FFA /* SettingsViewController.swift */,
+				86BD4A3D1F17721900F51FFA /* MenuViewController.swift */,
+				86BD4A3F1F1778D200F51FFA /* ListFriendsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8622F8081F1727E0007BF9FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8622F8091F1727FB007BF9FD /* UserTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		869113941F14E99900C69422 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				86B94E021F1DC84B00078C1B /* CountryCodes.json */,
+				869113951F14E9B400C69422 /* ExtensionUIColor.swift */,
+				86B94E081F1DCCA900078C1B /* Country.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +165,8 @@
 				TargetAttributes = {
 					8613E3E91F14CBC300C3C8FF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4C3N299Z2T;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +197,7 @@
 				8613E3F81F14CBC300C3C8FF /* LaunchScreen.storyboard in Resources */,
 				8613E3F51F14CBC300C3C8FF /* Assets.xcassets in Resources */,
 				8613E3F31F14CBC300C3C8FF /* Main.storyboard in Resources */,
+				86B94E031F1DC84B00078C1B /* CountryCodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +208,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8613E3F01F14CBC300C3C8FF /* ViewController.swift in Sources */,
+				86B94E091F1DCCA900078C1B /* Country.swift in Sources */,
+				8622F8071F170A1A007BF9FD /* HomeViewController.swift in Sources */,
+				869113931F14E7F000C69422 /* LoginViewController.swift in Sources */,
+				86BD4A3C1F176FF300F51FFA /* SettingsViewController.swift in Sources */,
+				86BD4A401F1778D200F51FFA /* ListFriendsTableViewController.swift in Sources */,
+				8613E4051F14D31100C3C8FF /* SignupViewController.swift in Sources */,
+				86BD4A361F176A8C00F51FFA /* SWRevealViewController.m in Sources */,
+				86BD4A381F176FB800F51FFA /* MapViewController.swift in Sources */,
+				8622F80C1F172C06007BF9FD /* ListUserTableViewController.swift in Sources */,
+				86BD4A3E1F17721900F51FFA /* MenuViewController.swift in Sources */,
 				8613E3EE1F14CBC300C3C8FF /* AppDelegate.swift in Sources */,
+				8622F80A1F1727FB007BF9FD /* UserTableViewCell.swift in Sources */,
+				86BD4A3A1F176FDC00F51FFA /* ChatViewController.swift in Sources */,
+				869113961F14E9B400C69422 /* ExtensionUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,10 +344,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4C3N299Z2T;
 				INFOPLIST_FILE = Map/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ahihi.ihaha.Map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Map/Controller/Map-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +361,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 4C3N299Z2T;
 				INFOPLIST_FILE = Map/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ahihi.ihaha.Map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Map/Controller/Map-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +392,7 @@
 				8613E3FE1F14CBC300C3C8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,10 +7,21 @@
 //
 
 import UIKit
-
+import MapKit
 class MapViewController: UIViewController {
+    @IBOutlet weak var buttonMenu: UIBarButtonItem!
 
+    @IBOutlet weak var map: MKMapView!
     override func viewDidLoad() {
+        if revealViewController() != nil {
+            buttonMenu.target = revealViewController()
+            buttonMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            navigationController?.navigationBar.isHidden = false
+            navigationController?.navigationBar.barTintColor = UIColor(hex: "69C49C")
+
+        }
+
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -19,6 +30,9 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+      
     }
     
 

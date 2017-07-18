@@ -10,6 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBAction func login(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "listUser")
+        self.present(vc!,animated: true)
+    }
+    @IBOutlet weak var buttonLogin: UIButton!
+    @IBAction func handleForgotPassword(_ sender: Any) {
+        let ac = UIAlertController(title: "Enter your email address to reset password", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        ac.addAction(cancelAction)
+        
+        present(ac, animated: true)
+    }
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var textFieldEmail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +35,16 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = UIColor(hex: "69C49C")
+        buttonLogin.layer.cornerRadius = 4
+        textFieldEmail.attributedPlaceholder = NSAttributedString(string: "email",
+                                                               attributes: [NSForegroundColorAttributeName: UIColor(hex: "69C49C")])
+        textFieldPassword.attributedPlaceholder = NSAttributedString(string: "password",
+                                                                  attributes: [NSForegroundColorAttributeName: UIColor(hex: "69C49C")])
+        
     }
     
 
