@@ -19,9 +19,23 @@ class MapViewController: UIViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             navigationController?.navigationBar.isHidden = false
             navigationController?.navigationBar.barTintColor = UIColor(hex: "69C49C")
+            
 
         }
-
+        let location:CLLocation = CLLocation(latitude: 20.991118, longitude: 105.783809)
+        let geoCoder = CLGeocoder()
+        //let location = CLLocation(latitude: touchCoordinate.latitude, longitude: touchCoordinate.longitude)
+        geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+            
+            // Place details
+            var placeMark: CLPlacemark!
+            placeMark = placemarks?[0]
+            
+            // Address dictionary
+            print(placeMark.addressDictionary as Any)
+            
+            // Location name
+                    })
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

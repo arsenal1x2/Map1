@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
+import Firebase
 
 class ListUserTableViewController: UITableViewController {
 
@@ -33,10 +36,22 @@ class ListUserTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     override func viewWillAppear(_ animated: Bool) {
+        var ref:FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.navigationItem.title = "Map Feed"
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barTintColor = UIColor(hex: "69C49C")
+        let userID = FIRAuth.auth()?.currentUser?.uid
+        ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            print(value)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
 
     }
     override func didReceiveMemoryWarning() {

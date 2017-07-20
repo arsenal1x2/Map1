@@ -7,12 +7,32 @@
 //
 
 import UIKit
-
-class LoginViewController: UIViewController {
+import FirebaseAuth
+import FirebaseCore
+import Firebase
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     @IBAction func login(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "listUser")
-        self.present(vc!,animated: true)
+        guard let email = textFieldEmail?.text else{
+           return
+        }
+        guard let password = textFieldPassword?.text else{
+           return
+        }
+        //Login
+        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+            if let err:Error = error {
+                print(err.localizedDescription)
+                return
+            }
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "listUser")
+            self.present(vc!,animated: true)
+            
+        })
+        
+
+
+        
     }
     @IBOutlet weak var buttonLogin: UIButton!
     @IBAction func handleForgotPassword(_ sender: Any) {
@@ -27,6 +47,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var textFieldPassword: UITextField!
     @IBOutlet weak var textFieldEmail: UITextField!
     override func viewDidLoad() {
+        textFieldPassword.delegate = self
+        textFieldEmail.delegate = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -47,7 +69,10 @@ class LoginViewController: UIViewController {
         
     }
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     /*
     // MARK: - Navigation
 
