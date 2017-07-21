@@ -20,17 +20,28 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
            return
         }
         //Login
-        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-            if let err:Error = error {
-                print(err.localizedDescription)
-                return
+        FIRAuth.auth()?.signIn(withEmail: email, password: password) {
+            (user, error) in
+            if let user = FIRAuth.auth()?.currentUser {
+                if !user.isEmailVerified{
+                    let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email).", preferredStyle: .alert)
+                    let alertActionOkay = UIAlertAction(title: "Ok", style: .default) {
+                        (_) in
+                        user.sendEmailVerification(completion: nil)
+                    }
+                    let alertActionCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                    
+                    alertVC.addAction(alertActionOkay)
+                    alertVC.addAction(alertActionCancel)
+                    self.present(alertVC, animated: true, completion: nil)
+                } else {
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "listUser")
+                    self.present(vc!,animated: true)
+                }
             }
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "listUser")
-            self.present(vc!,animated: true)
-            
-        })
-        
+        }
 
+       
 
         
     }

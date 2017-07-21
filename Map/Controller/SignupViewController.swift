@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Firebase
+import FirebaseAuth
 class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var textFieldPassword: UITextField!
     var listCountryPicker:[Country] = [Country]()
@@ -19,6 +20,7 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     @IBOutlet weak var buttonFemale: UIButton!
     @IBOutlet weak var buttonMale: UIButton!
     @IBOutlet weak var textFieldEmail: UITextField!
+    var isCheckGender:Bool = false
     var headPhoneNumberPicker:UIPickerView = UIPickerView()
     override func viewDidLoad() {
          initView()
@@ -30,8 +32,46 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         // Do any additional setup after loading the view.
     }
     @IBAction func signup(_ sender: Any) {
+        guard let email = textFieldEmail?.text else {
+            handleErrorSignup(with: "email")
+            return
+        }
+        guard let password = textFieldPassword?.text else{
+            handleErrorSignup(with: "password")
+            return
+        }
+        if(isCheckGender == false){
+            handleErrorSignup(with: "gender")
+            return
+        }
+        guard let phoneNumber = textFieldPhoneNumber?.text else{
+           handleErrorSignup(with: "phone number")
+            return
+        }
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {
+            user, error in
+            
+            if error != nil{
+                let alert = UIAlertController(title: "User exists.", message: "Please use another email or sign in.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return
+                print("Email has been used, try a different one")
+            }else{
+                
+                FIRAuth.auth()?.currentUser!.sendEmailVerification(completion: { (error) in
+                })
+                let alert = UIAlertController(title: "Account Created", message: "Please verify your email by confirming the sent link.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                print("This is a college email and user is created")
+                
+                }
+        })
         self.navigationController?.popViewController(animated: true)
+       
     }
+    
     @IBAction func chooseHeadPhoneNumberCountry(_ sender: Any) {
         if(dateTime.isHidden == false){
        
@@ -76,6 +116,7 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         buttonFemale.setTitleColor(UIColor(hex: "69C49C"), for: .normal)
         buttonMale.backgroundColor = UIColor(hex: "69C49C")
         buttonMale.setTitleColor(UIColor.white, for: .normal)
+        isCheckGender = true
     }
 
     @IBAction func clickFemale(_ sender: Any) {
@@ -83,6 +124,7 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         buttonMale.setTitleColor(UIColor(hex: "69C49C"), for: .normal)
         buttonFemale.backgroundColor = UIColor(hex: "69C49C")
         buttonFemale.setTitleColor(UIColor.white, for: .normal)
+        isCheckGender = true
     }
     @IBAction func chooseYourBirthday(_ sender: Any) {
         if(headPhoneNumberPicker.isHidden == false){
@@ -94,6 +136,12 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     }
 }
 extension SignupViewController{
+    func handleErrorSignup(with title:String){
+        let alert:UIAlertController = UIAlertController(title: title + " is required", message: "", preferredStyle: .alert)
+        let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(actionOK)
+        self.present(alert, animated:true, completion: nil)
+    }
     func setView(view: UIView, hidden: Bool) {
         UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: { _ in
             view.isHidden = hidden

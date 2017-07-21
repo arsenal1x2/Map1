@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B90034865D348A935E7C717 /* libPods-Map.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F922BB3E40B808B2AAA7C2 /* libPods-Map.a */; };
+		860964BE1F21C07F00092CA5 /* ExtensionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860964BD1F21C07F00092CA5 /* ExtensionDate.swift */; };
 		8613E3EE1F14CBC300C3C8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8613E3ED1F14CBC300C3C8FF /* AppDelegate.swift */; };
 		8613E3F31F14CBC300C3C8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8613E3F11F14CBC300C3C8FF /* Main.storyboard */; };
 		8613E3F51F14CBC300C3C8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8613E3F41F14CBC300C3C8FF /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		3DD52ED925223ACFB6D78F97 /* Pods-Map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.release.xcconfig"; path = "Pods/Target Support Files/Pods-Map/Pods-Map.release.xcconfig"; sourceTree = "<group>"; };
 		50BB585571737479B7B6A9CD /* Pods-Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Map/Pods-Map.debug.xcconfig"; sourceTree = "<group>"; };
+		860964BD1F21C07F00092CA5 /* ExtensionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDate.swift; sourceTree = "<group>"; };
 		8613E3EA1F14CBC300C3C8FF /* Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8613E3ED1F14CBC300C3C8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8613E3F21F14CBC300C3C8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				86B94E021F1DC84B00078C1B /* CountryCodes.json */,
 				869113951F14E9B400C69422 /* ExtensionUIColor.swift */,
 				86B94E081F1DCCA900078C1B /* Country.swift */,
+				860964BD1F21C07F00092CA5 /* ExtensionDate.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				8613E3EE1F14CBC300C3C8FF /* AppDelegate.swift in Sources */,
 				8622F80A1F1727FB007BF9FD /* UserTableViewCell.swift in Sources */,
 				86BD4A3A1F176FDC00F51FFA /* ChatViewController.swift in Sources */,
+				860964BE1F21C07F00092CA5 /* ExtensionDate.swift in Sources */,
 				869113961F14E9B400C69422 /* ExtensionUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
