@@ -50,7 +50,6 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         }
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: {
             user, error in
-            
             if error != nil{
                 let alert = UIAlertController(title: "User exists.", message: "Please use another email or sign in.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
@@ -69,7 +68,6 @@ class SignupViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
                 }
         })
         self.navigationController?.popViewController(animated: true)
-       
     }
     
     @IBAction func chooseHeadPhoneNumberCountry(_ sender: Any) {

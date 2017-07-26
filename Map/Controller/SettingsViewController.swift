@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Firebase
+import  FirebaseAuth
 class SettingsViewController: UITableViewController {
     @IBOutlet weak var buttonMenu: UIBarButtonItem!
 
@@ -35,7 +36,15 @@ class SettingsViewController: UITableViewController {
         let alertSignoutController:UIAlertController = UIAlertController(title: "Are you sure you want to signout", message: "", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) {
             (result : UIAlertAction) -> Void in
+            let firebaseAuth = FIRAuth.auth()
+            do {
+                try firebaseAuth?.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            
            self.dismiss(animated: true, completion: nil)
+            
             
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

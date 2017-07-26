@@ -50,8 +50,15 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         let ac = UIAlertController(title: "Enter your email address to reset password", message: nil, preferredStyle: .alert)
         ac.addTextField()
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {
+            void in
+           let emailReset = ac.textFields?[0].text
+            FIRAuth.auth()?.sendPasswordReset(withEmail: emailReset!) { error in
+                // Your code here
+            }
+        })
         ac.addAction(cancelAction)
+        ac.addAction(okAction)
         
         present(ac, animated: true)
     }
